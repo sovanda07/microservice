@@ -9,7 +9,7 @@ app.use(express.json());
 const JWT_SECRET_KEY = process.env.JWT_SECRET_KEY;
 
 const PersonModel = require('./schema.js');
-const dbconnect = require('./DBconnect.js');
+const dbconnect = require('./dbconnect.js');
 
 // LOGIN API
 app.post("/login", async (req, res) => {
