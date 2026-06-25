@@ -47,13 +47,13 @@ function authRole(role) {
 // STUDENT SERVICE
 app.use('/student', authToken, authRole('student'), (req, res) => {
         console.log("INSIDE API GATEWAY STUDENT ROUTE");
-        proxy.web(req, res, { target: 'http://100.27.246.188:5000'});
+        proxy.web(req, res, { target: 'http://localhost:5000'});
 });
 
 // TEACHER SERVICE
 app.use('/teacher', authToken, authRole('teacher'), (req, res) => {
         console.log("INSIDE API GATEWAY TEACHER ROUTE");
-        proxy.web(req, res, { target: 'http://98.92.244.184:5001' });
+        proxy.web(req, res, { target: 'http://localhost:5001' });
 });
 
 // REGISTRATION SERVICE
